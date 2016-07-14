@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>14-Puppy-Adoption</title>
-  <link rel="stylesheet" href="/app.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>14-puppy-adoption</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
 
-  <script src="/vendor.js" charset="utf-8"></script>
-  <script src="/app.js" charset="utf-8"></script>
+    <nav class="top-nav">
+      <div class="top-nav__form">
+        <div id="dropdownId" class="dropdown">
+          <div class="dropdown-container">
+            <form class="dropdown-sub-container">
+              <p class="dropdown-heading">Add a new puppy</p>
+              <div class="input-field">
+                <h5 class="input-heading">Name</h5>
+                <input class="dropdown-name" type="text">
+              </div>
+              <div class="input-field">
+                <h5 class="input-heading">Age</h5>
+                <input class="dropdown-age" type="text">
+              </div>
+              <div class="input-field">
+                <h5 class="input-heading">Profile URL</h5>
+                <input class="dropdown-profileUrl" type="text">
+              </div>
+              <div class="input-field">
+                <h5 class="input-heading">Profile</h5>
+                <input class="dropdown-profile" type="text">
+              </div>
+              <button class="dropdown-button">Save</button>
 
-  <script type="text/javascript">
-  </script>
-</body>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+      <div class="puppy-card"></div>
+        <img class="puppy-img" src="" alt="">
+        <div class="puppy-form"></div>
+        <div class="profile-url"></div>
+        <div class="profile"></div>
+
+
+
+
+    <div class="puppy-list"></div>
+    <script src="/vendor.js" charset="utf-8"></script>
+    <script src="/app.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      var index = require('index');
+      index();
+    </script>
+  </body>
 </html>
