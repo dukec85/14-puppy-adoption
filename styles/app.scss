@@ -6,31 +6,90 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 @import 'variables';
 
-.body {
+body {
   margin: 0;
 }
 
-.container {
-  background: $brand-white;
-  color: $brand-black;
+ul {
+  padding-left: 0;
+  list-style: none;
 }
 
-.puppies {
-  background: $brand-gross-orange;
+figure {
+  margin-left: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__nav {
+    padding: 0 $gutter;
+    background: $brand-gross-orange;
+    color: $brand-white;
+    font-family: sans-serif;
+  }
+
+  &__main {
+    flex-grow: 1;
+    padding: 0 $gutter;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 60rem;
+  margin: auto;
+}
+
+.title {
+  flex-grow: 1;
+  padding: 0;
+}
+
+.fa-plus-circle {
   color: $brand-white;
+  font-size: 1.5rem;
+}
+
+.nav-form {
+  display: flex;
+  width: 100%;
+  padding: 0 $gutter;
+  background: $brand-dark-gray;
+  color: $brand-white;
+  font-family: sans-serif;
+}
+
+.form-list {
+  width: 60rem;
+}
+
+.puppy-card {
+  display: flex;
+  background: $brand-light-gray;
+  color: $brand-black;
+  font-family: sans-serif;
+  width: 60rem;
+}
+
+.add-puppy {
+  background: $brand-dark-gray
+}
+
+.card-info {
+  flex-grow: 1;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .button {
   background: $brand-gross-orange;
-  color: $brand-white;
-}
-
-.dropdown-button {
-  background: $brand-gross-orange;
-  color: $brand-white;
-}
-
-.top-nav__form {
-  background: $brand_dark_gray;
   color: $brand-white;
 }
