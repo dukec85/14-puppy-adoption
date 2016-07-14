@@ -4,9 +4,33 @@
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome';
 @import 'box-sizing';
+@import 'variables';
 
+.body {
+  margin: 0;
+}
 
-//.puppies {
-  //background: $brand-gross-orange;
-  //color: $brand-white;
-//}
+.container {
+  background: $brand-white;
+  color: $brand-black;
+}
+
+.puppies {
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.button {
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.dropdown-button {
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.top-nav__form {
+  background: $brand_dark_gray;
+  color: $brand-white;
+}
