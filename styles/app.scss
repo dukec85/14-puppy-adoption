@@ -69,14 +69,14 @@ figure {
 
 .puppy-card {
   display: flex;
+  width: 60rem;
   background: $brand-light-gray;
   color: $brand-black;
   font-family: sans-serif;
-  width: 60rem;
 }
 
 .add-puppy {
-  background: $brand-dark-gray
+  background: $brand-dark-gray;
 }
 
 .card-info {
@@ -91,5 +91,23 @@ figure {
 
 .button {
   background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.puppies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.dropdown-button {
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.top-nav__form {
   color: $brand-white;
 }
