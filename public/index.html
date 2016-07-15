@@ -82,6 +82,10 @@
   <script type="text/javascript">
   var index = require('index');
   index();
+  var htmlApp = document.querySelector('.app');
+  var ApplicationView = require('application');
+  var appyMcAppFace = new ApplicationView(htmlApp);
+  appyMcAppFace.render();
 
   </script>
 </body>
