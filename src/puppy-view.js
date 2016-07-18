@@ -5,28 +5,28 @@ export default class PuppyView {
 
     this.element = document.createElement('div');
     this.element.classList.add('puppy-list__item');
-    this.element.innerHTML = `<div class="container puppy-list">
+    this.element.innerHTML = `
       <div class="puppy-card">
         <figure class="pic-frame">
-          <img class="puppy" src="" alt="">
+          <img class="puppy" src="http://placecera.com/200/300" alt="">
         </figure>
         <div class="card-info">
           <ul class="form-list">
-            <li class="form-list__item form-list__name">
-              <p class="card-info__title"></p>
-              <input class="card-input" type="text">
+            <li class="form-list__item">
+              <label>Name</label>
+              <input type="text" class="name"/>
             </li>
-            <li class="form-list__item form-list__age">
-              <p class="card-info__title age"></p>
-              <input class="card-input" type="text">
+            <li class="form-list__item">
+              <label>Age</label>
+              <input type="text" class="age" />
             </li>
-            <li class="form-list__item form-list__photourl">
-              <p class="card-info__title photourl"></p>
-              <input class="card-input" type="text">
+            <li class="form-list__item">
+              <label>Profile URL</label>
+              <input type="text" class="photourl" />
             </li>
-            <li class="form-list__item form-list__profile">
-              <p class="card-info__title profile"></p>
-              <input class="card-input" type="text">
+            <li class="form-list__item">
+              <label>Profile</label>
+              <input type="text" class="profile"/>
             </li>
           </ul>
 
@@ -41,11 +41,11 @@ export default class PuppyView {
   render() {
     console.log(this.element);
 
-    this.element.querySelector('.card-info__title').innerHTML = this.currentPup.name;
-    this.element.querySelector('.age').innerHTML = this.currentPup.age;
-    this.element.querySelector('.photourl').innerHTML = this.currentPup.photoUrl;
+    this.element.querySelector('.name').value = this.currentPup.name;
+    this.element.querySelector('.age').value = this.currentPup.age;
+    this.element.querySelector('.photourl').value = this.currentPup.photoUrl;
+    this.element.querySelector('.profile').value = this.currentPup.profile;
     this.element.querySelector('.puppy').src = this.currentPup.photoUrl;
-    this.element.querySelector('.profile').innerText = this.currentPup.profile;
   }
 
 }

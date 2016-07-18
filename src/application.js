@@ -9,14 +9,11 @@ export default class ApplicationView {
   render() {
     const list = this.element.querySelector('.puppy-list');
     list.innerHTML = '';
-    debugger;
 
     this.data.forEach((puppy) => {
       const newPuppy = new PuppyView(puppy, this);
       list.appendChild(newPuppy.element);
       newPuppy.render();
-
-      this.element.appendChild(newPuppy.element);
     });
   }
   start() {
@@ -25,6 +22,6 @@ export default class ApplicationView {
       .then((data) => {
         this.data = data;
         this.render();
-      })
+      });
   }
 }

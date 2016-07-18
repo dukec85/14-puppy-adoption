@@ -3,4 +3,11 @@
       this.element = element;
       this.instsance = instance;
     }
+
+    togggle() {
+
+    }
+    togglenav() {
+
+    }
 }

@@ -38,9 +38,7 @@ figure {
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  max-width: 60rem;
+  max-width: 65rem;
   margin: auto;
 }
 
@@ -67,15 +65,20 @@ figure {
   width: 60rem;
 }
 
+.puppy-list {
+  margin: 0 -1rem;
+}
+
 .puppy-card {
   display: flex;
-  width: 60rem;
+  margin: 1rem;
   background: $brand-light-gray;
   color: $brand-black;
   font-family: sans-serif;
 }
 
 .add-puppy {
+  padding: 1rem;
   background: $brand-dark-gray;
 }
 
@@ -87,6 +90,7 @@ figure {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 35rem;
 }
 
 .button {
@@ -109,7 +113,6 @@ figure {
 }
 
 .top-nav__form {
-  padding: 0 $gutter;
   color: $brand-white;
 }
 
