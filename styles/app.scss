@@ -109,16 +109,17 @@ figure {
 }
 
 .top-nav__form {
+  padding: 0 $gutter;
   color: $brand-white;
-  padding:0 $gutter;
 }
 
 .input-field {
   border-style: none;
 }
+
 .drop {
-  background: $brand-dark-gray;
-  border: none;
-  border-bottom: .1rem black solid;
   width: 100%;
+  border: 0;
+  border-bottom: 0.1rem black solid;
+  background: $brand-dark-gray;
 }
