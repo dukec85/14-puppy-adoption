@@ -14,9 +14,9 @@ export default class ApplicationView {
     this.data.forEach((puppy) => {
       const newPuppy = new PuppyView(puppy, this);
       list.appendChild(newPuppy.element);
-      puppy.render();
+      newPuppy.render();
 
-      this.element.appendChild(puppy.element);
+      this.element.appendChild(newPuppy.element);
     });
   }
   start() {
