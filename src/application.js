@@ -6,6 +6,7 @@ export default class ApplicationView {
     this.element = element;
     this.data = [];
   }
+
   render() {
     const list = this.element.querySelector('.puppy-list');
     list.innerHTML = '';
@@ -16,8 +17,9 @@ export default class ApplicationView {
       newPuppy.render();
     });
   }
+
   start() {
-    return fetch(`http://tiny-tn.herokuapp.com/collections/ryan-puppy`)
+    return fetch('http://tiny-tn.herokuapp.com/collections/ryan-puppy')
       .then((res) => res.json())
       .then((data) => {
         this.data = data;

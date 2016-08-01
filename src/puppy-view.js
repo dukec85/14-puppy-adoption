@@ -29,23 +29,29 @@ export default class PuppyView {
               <input type="text" class="profile"/>
             </li>
           </ul>
-
           <div class="button-container">
             <button class="button">Delete</button>
             <button class="button">Update</button>
           </div>
-
         </div>
       </div>`;
   }
   render() {
-    console.log(this.element);
-
     this.element.querySelector('.name').value = this.currentPup.name;
     this.element.querySelector('.age').value = this.currentPup.age;
     this.element.querySelector('.photourl').value = this.currentPup.photoUrl;
     this.element.querySelector('.profile').value = this.currentPup.profile;
     this.element.querySelector('.puppy').src = this.currentPup.photoUrl;
   }
-
 }
+
+
+// fetch(`http://tiny-tn.herokuapp.com/collections/cd-puppy`, {
+//     method: 'post',
+//     headers: {
+//       Accept: 'application/json',
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(puppyData)
+//   }).then((res) => res.json())
+//   .then((data) => {
