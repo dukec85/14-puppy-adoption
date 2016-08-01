@@ -43,6 +43,11 @@ export default class PuppyView {
     this.element.querySelector('.profile').value = this.currentPup.profile;
     this.element.querySelector('.puppy').src = this.currentPup.photoUrl;
   }
+
+  remove() {
+    this.element.querySelector('.btn-dlt').addEventListener('click', (ev) => {
+      ev.preventDefault();
+
 }
 
 

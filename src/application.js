@@ -22,6 +22,17 @@ export default class ApplicationView {
     });
   }
 
+  addPuppyData(puppy) {
+    this.data = [puppy, ...this.data];
+    this.render();
+  }
+
+  removePuppyData(puppy) {
+    this.data = this.data.filter((x) => x !== puppy);
+    this.render();
+  }
+
+
   start() {
     return fetch('http://tiny-tn.herokuapp.com/collections/cd-puppy')
       .then((res) => res.json())
