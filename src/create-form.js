@@ -34,5 +34,11 @@ export default class CreateFormView {
       });
     });
   }
-
-}
+  toggle() {
+      const button = document.querySelector('.add-btn');
+      const form = document.querySelector('.dropdown-sub-container');
+      button.addEventListener('click', () => {
+        form.classList.toggle('hidden');
+      });
+    }
+  }
