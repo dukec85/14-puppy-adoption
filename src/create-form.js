@@ -7,7 +7,7 @@ export default class CreateFormView {
   add() {
     const toggleArea = document.querySelector('.add-puppy');
     this.el.querySelector('.add-btn').addEventListener('click', () => {
-      this.el.querySelector('.add-btn').classList.toggleArea('dropdown-sub-container');
+      toggleArea.classList.toggle('add-puppy--show');
     });
 
 
@@ -38,11 +38,4 @@ export default class CreateFormView {
       });
     });
   }
-  toggle() {
-    const button = document.querySelector('.add-btn');
-    const form = document.querySelector('.dropdown-sub-container');
-    button.addEventListener('click', () => {
-      form.classList.toggle('hidden');
-    });
-  }
-  }
+}
