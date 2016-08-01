@@ -4,22 +4,26 @@ import CreateFormView from 'create-form';
 export default class ApplicationView {
   constructor(element) {
     this.element = element;
+    this.listElement = element.querySelector('.puppy-list');
     this.data = [];
+
+    this.formView = new CreateFormView(this.element, this);
+
+    this.start();
   }
 
   render() {
-    const list = this.element.querySelector('.puppy-list');
-    list.innerHTML = '';
+    this.listElement.innerHTML = '';
 
     this.data.forEach((puppy) => {
       const newPuppy = new PuppyView(puppy, this);
-      list.appendChild(newPuppy.element);
+      this.listElement.appendChild(newPuppy.element);
       newPuppy.render();
     });
   }
 
   start() {
-    return fetch('http://tiny-tn.herokuapp.com/collections/ryan-puppy')
+    return fetch('http://tiny-tn.herokuapp.com/collections/cd-puppy')
       .then((res) => res.json())
       .then((data) => {
         this.data = data;
