@@ -86,8 +86,13 @@ figure {
 }
 
 .add-puppy {
+  display: none;
   padding: 1rem;
   background: $brand-dark-gray;
+
+  &--show {
+    display: block;
+  }
 }
 
 .card-info {

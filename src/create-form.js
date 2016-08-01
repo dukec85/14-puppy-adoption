@@ -1,6 +1,10 @@
 export default class CreateFormView {
   constructor(el) {
     this.el = el;
+    this.add();
+   }
+
+    add() {
 
     this.el.querySelector('.dropdown-sub-container').addEventListener('submit', (ev) => {
       ev.preventDefault();
@@ -12,7 +16,7 @@ export default class CreateFormView {
         profile: this.el.querySelector('.dropdown-profile').value,
       };
 
-      fetch('http://tiny-tn.herokuapp.com/collections/cd-puppy', {
+      fetch('http://tiny-tn.herokuapp.com/collections/cd-puppies', {
         method: 'post',
         headers: {
           Accept: 'application/json',
@@ -30,4 +34,5 @@ export default class CreateFormView {
       });
     });
   }
+
 }
