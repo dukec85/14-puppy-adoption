@@ -1,6 +1,140 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
+@import 'variables';
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+figure {
+  margin-left: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__nav {
+    padding: 0 $gutter;
+    background: $brand-gross-orange;
+    color: $brand-white;
+    font-family: sans-serif;
+  }
+
+  &__main {
+    flex-grow: 1;
+    padding: 0 $gutter;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 65rem;
+  margin: auto;
+}
+
+.title {
+  flex-grow: 1;
+  padding: 0;
+}
+
+.fa-plus-circle {
+  color: $brand-white;
+  font-size: 1.5rem;
+}
+
+.add-btn {
+  color: $brand-gross-orange;
+  background: transparent;
+}
+
+.title-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-form {
+  display: flex;
+  width: 100%;
+  padding: 0 $gutter;
+  background: $brand-dark-gray;
+  color: $brand-white;
+  font-family: sans-serif;
+}
+
+.puppy-list {
+  margin: 0 -1rem;
+}
+
+.puppy-card {
+  display: flex;
+  margin: 1rem;
+  background: $brand-light-gray;
+  color: $brand-black;
+  font-family: sans-serif;
+}
+
+.add-puppy {
+  display: none;
+  padding: 1rem;
+  background: $brand-dark-gray;
+
+  &--show {
+    display: block;
+  }
+}
+
+.card-info {
+  flex-grow: 1;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.puppies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.dropdown-button {
+  background: $brand-gross-orange;
+  color: $brand-white;
+}
+
+.top-nav__form {
+  color: $brand-white;
+}
+
+.input-field {
+  border-style: none;
+}
+
+.drop {
+  width: 100%;
+  border: 0;
+  border-bottom: 0.1rem black solid;
+  background: $brand-dark-gray;
+}
