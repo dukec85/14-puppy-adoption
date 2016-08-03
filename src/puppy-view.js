@@ -3,6 +3,7 @@ export default class PuppyView {
     this.currentPup = currentPup;
     this.el = el;
 
+
     this.element = document.createElement('div');
     this.element.classList.add('puppy-list__item');
     this.element.innerHTML = `
@@ -35,7 +36,11 @@ export default class PuppyView {
           </div>
         </div>
       </div>`;
+    this.render();
+    this.remove();
+    this.update();
   }
+
   render() {
     this.element.querySelector('.name').value = this.currentPup.name;
     this.element.querySelector('.age').value = this.currentPup.age;
@@ -47,16 +52,17 @@ export default class PuppyView {
   remove() {
     this.element.querySelector('.btn-dlt').addEventListener('click', (ev) => {
       ev.preventDefault();
-
+    });
+  }
 }
 
 
-// fetch(`http://tiny-tn.herokuapp.com/collections/cd-puppy`, {
-//     method: 'post',
-//     headers: {
-//       Accept: 'application/json',
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(puppyData)
-//   }).then((res) => res.json())
-//   .then((data) => {
+      // fetch(`http://tiny-tn.herokuapp.com/collections/cd-puppy`, {
+      //     method: 'post',
+      //     headers: {
+      //       Accept: 'application/json',
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(puppyData)
+      //   }).then((res) => res.json())
+      //   .then((data) => {

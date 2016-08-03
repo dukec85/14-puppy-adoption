@@ -12,6 +12,15 @@ export default class ApplicationView {
     this.start();
   }
 
+//  start() {
+//    return fetch('http://tiny-tn.herokuapp.com/collections/cd-puppy')
+//      .then((res) => res.json())
+//      .then((data) => {
+//        this.data = data;
+//        this.render(data);
+//      });
+//  }
+
   render() {
     this.listElement.innerHTML = '';
 
@@ -32,13 +41,4 @@ export default class ApplicationView {
     this.render();
   }
 
-
-  start() {
-    return fetch('http://tiny-tn.herokuapp.com/collections/cd-puppy')
-      .then((res) => res.json())
-      .then((data) => {
-        this.data = data;
-        this.render();
-      });
-  }
 }
